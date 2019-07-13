@@ -6,13 +6,13 @@ def collatz(num):
     collatz_list = []
     while True:
         try:
-            if int(num) % 2 == 0 and int(num) != 1:
+            if int(num) % 2 == 0 and int(num) > 1:
                 num = int(num) // 2
                 collatz_list.append(num)   # catch num into a list
-            if int(num) % 2 == 1 and int(num) != 1:
+            if int(num) % 2 == 1 and int(num) > 1:
                 num = 3 * int(num) + 1
                 collatz_list.append(num)
-            if int(num) != 1:
+            if int(num) > 1:
                 continue    # if the condition is true, go back to the top of the loop
             else:
                 return collatz_list   # retain a complete list to be used in global scope
