@@ -17,6 +17,7 @@ def collatz(num):
             break
     return collatz_list                 # retain the list value for use in global scope
 
+print('Please type in an integer: ')
 try:
     num = int(input())
     if num <= 1:                         # for a input that is less than or equal 1
